@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Du Lịch Việt Nam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=8">
+</head>
+<body class="home-page">
+  <header class="hero" id="trang-chu">
+    <nav class="navbar container" aria-label="Điều hướng chính">
+      <a class="brand" href="#trang-chu">Du Lịch Việt Nam</a>
+      <button class="menu-toggle" type="button" aria-label="Mở menu" aria-expanded="false">☰</button>
+      <div class="nav-links">
+        <a class="active" href="index.html">Trang chủ</a>
+        <a href="gioi-thieu.html">Giới thiệu</a>
+        <a href="dia-diem.html">Địa điểm</a>
+        <a href="lien-he.html">Liên hệ</a>
+        <a href="chi-tiet.html">Chi tiết</a>
+      </div>
+    </nav>
+
+    <div class="hero-content container">
+      <h1>Khám Phá Việt Nam</h1>
+      <p>Trải nghiệm những địa điểm du lịch tuyệt vời nhất Việt Nam</p>
+    </div>
+
+  </header>
+
+  <main>
+    <section class="subscribe" id="dang-ky">
+      <h2>Đăng Ký Nhận Thông Tin</h2>
+      <form class="subscribe-form">
+        <label class="sr-only" for="email">Địa chỉ email</label>
+        <input id="email" type="email" placeholder="Nhập email của bạn..." required>
+        <button type="submit">Đăng ký</button>
+      </form>
+    </section>
+
+    <section class="destinations home-destinations" aria-label="Chủ đề du lịch">
+      <div class="container destination-grid">
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80" alt="Du lịch biển">
+          <h3>Du Lịch Biển</h3>
+          <p>Thưởng thức những bãi biển tuyệt đẹp với nước biển xanh ngắt.</p>
+        </article>
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=700&q=80" alt="Du lịch núi">
+          <h3>Du Lịch Núi</h3>
+          <p>Khám phá những ngọn núi hùng vĩ và cảnh quan thiên nhiên.</p>
+        </article>
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=700&q=80" alt="Văn hóa Việt Nam">
+          <h3>Văn Hóa</h3>
+          <p>Trải nghiệm văn hóa phong phú và ẩm thực đặc sắc.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Du Lịch Việt Nam, Copyright © 2026</p>
+    <a href="mailto:khoidangkho1i@gmail.com">khoidangkho1i@gmail.com</a>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuButton.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.querySelectorAll('.nav-links a').forEach((link) => {
+      link.addEventListener('click', () => {
+        document.querySelectorAll('.nav-links a').forEach((item) => item.classList.remove('active'));
+        link.classList.add('active');
+        navLinks.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.querySelector('.subscribe-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const input = event.currentTarget.querySelector('input');
+      if (input.value.trim()) {
+        event.currentTarget.querySelector('button').textContent = 'Đã đăng ký';
+        input.value = '';
+      }
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Địa Điểm | Du Lịch Việt Nam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+  <header class="hero page-header destinations-header" id="trang-chu">
+    <nav class="navbar container" aria-label="Điều hướng chính">
+      <a class="brand" href="index.html">Du Lịch Việt Nam</a>
+      <button class="menu-toggle" type="button" aria-label="Mở menu" aria-expanded="false">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Trang chủ</a>
+        <a href="gioi-thieu.html">Giới thiệu</a>
+        <a class="active" href="dia-diem.html">Địa điểm</a>
+        <a href="lien-he.html">Liên hệ</a>
+        <a href="chi-tiet.html">Chi tiết</a>
+      </div>
+    </nav>
+    <div class="hero-content container">
+      <h1>Địa Điểm Nổi Tiếng</h1>
+      <p>Khám phá cảnh quan và văn hóa đặc sắc khắp ba miền</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="places-section" id="danh-sach">
+      <div class="container">
+        <div class="places-heading">
+          <p class="eyebrow">Điểm đến khắp ba miền</p>
+          <h2>Khám Phá Nét Đẹp Việt Nam</h2>
+        </div>
+
+        <div class="places-filter" aria-label="Lọc địa điểm">
+          <button class="filter-button active" type="button" data-region="all">Tất cả</button>
+          <button class="filter-button" type="button" data-region="north">Miền Bắc</button>
+          <button class="filter-button" type="button" data-region="central">Miền Trung</button>
+          <button class="filter-button" type="button" data-region="south">Miền Nam</button>
+        </div>
+
+        <div class="places-grid">
+          <article class="place-card" data-region="north">
+            <a href="chi-tiet.html?place=ha-long" aria-label="Xem chi tiết Vịnh Hạ Long">
+              <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=900&q=85" alt="Vịnh Hạ Long">
+            </a>
+            <div class="place-body"><span class="region-tag">Miền Bắc</span><h3><a href="chi-tiet.html?place=ha-long">Vịnh Hạ Long</a></h3><p>Quần đảo đá vôi kỳ vĩ và làn nước xanh ngọc là biểu tượng du lịch của Quảng Ninh.</p><span class="place-meta">Quảng Ninh</span></div>
+          </article>
+          <article class="place-card" data-region="central">
+            <a href="chi-tiet.html?place=hoi-an" aria-label="Xem chi tiết Phố cổ Hội An"><img src="https://tse4.mm.bing.net/th/id/OIP.1zq4a7G007iHUBybiLxrTwHaEn?r=0&pid=Api&h=220&P=0" alt="Phố cổ Hội An về đêm bên dòng sông Hoài"></a>
+            <div class="place-body"><span class="region-tag">Miền Trung</span><h3><a href="chi-tiet.html?place=hoi-an">Phố cổ Hội An</a></h3><p>Đô thị cổ yên bình với đèn lồng, mái ngói và văn hóa giao thoa đặc sắc.</p><span class="place-meta">Quảng Nam</span></div>
+          </article>
+          <article class="place-card" data-region="central">
+            <a href="chi-tiet.html?place=hue" aria-label="Xem chi tiết Cố đô Huế"><img src="https://tse4.mm.bing.net/th/id/OIP.lRsNO_ufUMl9E0PqrZhfAgHaE8?r=0&pid=Api&h=220&P=0" alt="Cố đô Huế về hoàng hôn"></a>
+            <div class="place-body"><span class="region-tag">Miền Trung</span><h3><a href="chi-tiet.html?place=hue">Cố đô Huế</a></h3><p>Quần thể cung điện, lăng tẩm và chùa chiền kể câu chuyện triều Nguyễn.</p><span class="place-meta">Thừa Thiên Huế</span></div>
+          </article>
+          <article class="place-card" data-region="central">
+            <a href="chi-tiet.html?place=da-lat" aria-label="Xem chi tiết Đà Lạt"><img src="https://tse3.mm.bing.net/th/id/OIP.eRJmvxd-FwDauGOWwo24GAHaEw?r=0&pid=Api&h=220&P=0" alt="Thành phố Đà Lạt"></a>
+            <div class="place-body"><span class="region-tag">Tây Nguyên</span><h3><a href="chi-tiet.html?place=da-lat">Thành phố Đà Lạt</a></h3><p>Không khí se lạnh, đồi thông và kiến trúc cổ tạo nên nét thơ mộng.</p><span class="place-meta">Lâm Đồng</span></div>
+          </article>
+          <article class="place-card" data-region="south">
+            <a href="chi-tiet.html?place=phu-quoc" aria-label="Xem chi tiết Đảo Phú Quốc"><img src="https://tse3.mm.bing.net/th/id/OIP.L1Z_RnujZqeatQJcnGEpbgHaEK?r=0&pid=Api&h=220&P=0" alt="Bãi biển Phú Quốc"></a>
+            <div class="place-body"><span class="region-tag">Miền Nam</span><h3><a href="chi-tiet.html?place=phu-quoc">Đảo Phú Quốc</a></h3><p>Biển trong xanh, bãi cát trắng và hoàng hôn rực rỡ hút khách quanh năm.</p><span class="place-meta">An Giang</span></div>
+          </article>
+          <article class="place-card" data-region="north">
+            <a href="chi-tiet.html?place=sapa" aria-label="Xem chi tiết Sa Pa"><img src="https://tse4.mm.bing.net/th/id/OIP.l53f-tvYGfuY45Ti82FTagHaFi?r=0&pid=Api&h=220&P=0" alt="Sa Pa"></a>
+            <div class="place-body"><span class="region-tag">Miền Bắc</span><h3><a href="chi-tiet.html?place=sapa">Sa Pa</a></h3><p>Ruộng bậc thang, bản làng và dãy núi Fansipan tạo nên cảnh quan hùng vĩ.</p><span class="place-meta">Lào Cai</span></div>
+          </article>
+          <article class="place-card" data-region="north">
+            <a href="chi-tiet.html?place=trang-an" aria-label="Xem chi tiết Tràng An"><img src="https://tse2.mm.bing.net/th/id/OIP.lYr7CCzDCUcrYIu1BH1HBwHaFC?r=0&pid=Api&h=220&P=0"></a>
+            <div class="place-body"><span class="region-tag">Miền Bắc</span><h3><a href="chi-tiet.html?place=trang-an">Tràng An</a></h3><p>Hàng loạt núi đá vôi, hang động và dòng sông uốn quanh tạo nên cảnh quan thiên nhiên đặc sắc.</p><span class="place-meta">Ninh Bình</span></div>
+          </article>
+          <article class="place-card" data-region="central">
+            <a href="chi-tiet.html?place=nha-trang" aria-label="Xem chi tiết Nha Trang"><img src="https://tse2.mm.bing.net/th/id/OIP.DNPcA5BrJ4ZvfJqz7kTwMgHaEp?r=0&pid=Api&h=220&P=0" alt="Thành phố biển Nha Trang"></a>
+            <div class="place-body"><span class="region-tag">Miền Trung</span><h3><a href="chi-tiet.html?place=nha-trang">Nha Trang</a></h3><p>Thành phố ven biển nổi bật với vịnh đẹp, đảo xanh, nước trong và các hoạt động dưới nước.</p><span class="place-meta">Khánh Hòa</span></div>
+          </article>
+          <article class="place-card" data-region="central">
+            <a href="chi-tiet.html?place=phong-nha" aria-label="Xem chi tiết Phong Nha Kẻ Bàng"><img src="https://tse1.mm.bing.net/th/id/OIP.NRVW5x7fIqyJfRlNhFz-7AHaFj?r=0&pid=Api&h=220&P=0" alt="Phong Nha Kẻ Bàng"></a>
+            <div class="place-body"><span class="region-tag">Miền Trung</span><h3><a href="chi-tiet.html?place=phong-nha">Phong Nha - Kẻ Bàng</a></h3><p>Hệ thống hang động dài, sông ngầm và rừng nguyên sinh tạo nên di sản thiên nhiên độc đáo.</p><span class="place-meta">Quảng Bình</span></div>
+          </article>
+          <article class="place-card" data-region="north">
+            <a href="chi-tiet.html?place=mu-cang-chai" aria-label="Xem chi tiết Mù Cang Chải"><img src="https://tse3.mm.bing.net/th/id/OIP.5ZrNizqZfNmtcu_JNfsO8gHaE8?r=0&pid=Api&h=220&P=0" alt="Ruộng bậc thang Mù Cang Chải"></a>
+            <div class="place-body"><span class="region-tag">Miền Bắc</span><h3><a href="chi-tiet.html?place=mu-cang-chai">Mù Cang Chải</a></h3><p>Những thửa ruộng bậc thang vàng óng quanh co dưới chân núi tạo nên vẻ đẹp đặc trưng.</p><span class="place-meta">Yên Bái</span></div>
+          </article>
+          <article class="place-card" data-region="north">
+            <a href="chi-tiet.html?place=ha-giang" aria-label="Xem chi tiết Hà Giang"><img src="https://tse2.mm.bing.net/th/id/OIP.NHXWBmHGWJQ5RcYzeer-NwHaEo?r=0&pid=Api&h=220&P=0" alt="Cao nguyên đá Hà Giang"></a>
+            <div class="place-body"><span class="region-tag">Miền Bắc</span><h3><a href="chi-tiet.html?place=ha-giang">Hà Giang</a></h3><p>Cao nguyên đá, đèo núi, cung đường uốn lượn và mùa tam giác mạch hút khách khám phá.</p><span class="place-meta">Hà Giang</span></div>
+          </article>
+          <article class="place-card" data-region="south">
+            <a href="chi-tiet.html?place=cai-rang" aria-label="Xem chi tiết Chợ nổi Cái Răng"><img src="https://tse2.mm.bing.net/th/id/OIP.SXuhLzyCOeG_15b7OWz_UwHaE9?r=0&pid=Api&h=220&P=0" alt="Chợ nổi miền Tây"></a>
+            <div class="place-body"><span class="region-tag">Miền Nam</span><h3><a href="chi-tiet.html?place=cai-rang">Chợ nổi Cái Răng</a></h3><p>Ghe thuyền chất đầy trái cây và sinh hoạt trên sông tạo nên bản sắc miền Tây sông nước.</p><span class="place-meta">Cần Thơ</span></div>
+          </article>
+          <article class="place-card" data-region="south">
+            <a href="chi-tiet.html?place=tra-vinh" aria-label="Xem chi tiết Trà Vinh"><img src="https://tse2.mm.bing.net/th/id/OIP.ppZA9Ey79V0h7uz95SAsPAHaEu?r=0&pid=Api&h=220&P=0" alt="Cảnh quê Trà Vinh"></a>
+            <div class="place-body"><span class="region-tag">Miền Nam</span><h3><a href="chi-tiet.html?place=tra-vinh">Trà Vinh</a></h3><p>Địa phương ven sông nổi tiếng với chùa Khmer cổ, ao tàu xanh và đời sống đậm bản sắc miền Tây.</p><span class="place-meta">Trà Vinh</span></div>
+          </article>
+          <article class="place-card" data-region="south">
+            <a href="chi-tiet.html?place=vinh-long" aria-label="Xem chi tiết Vĩnh Long"><img src="https://tse3.mm.bing.net/th/id/OIP.ezjwkZAhuLjWDRGN3UTgGQHaE8?r=0&pid=Api&h=220&P=0" alt="Khu du lịch miệt vườn Vĩnh Long"></a>
+            <div class="place-body"><span class="region-tag">Miền Nam</span><h3><a href="chi-tiet.html?place=vinh-long">Vĩnh Long</a></h3><p>Xứ sở vườn trái miền Tây với vườn xanh, chợ nổi, sông Hậu và homestay nghỉ dưỡng.</p><span class="place-meta">Vĩnh Long</span></div>
+          </article>
+          <article class="place-card" data-region="central">
+            <a href="chi-tiet.html?place=ba-na" aria-label="Xem chi tiết Bà Nà Hills"><img src="https://tse3.mm.bing.net/th/id/OIP.uRMgZQKiJ6cPrM8QGP4toQHaFI?r=0&pid=Api&h=220&P=0" alt="Bà Nà Hills Đà Nẵng"></a>
+            <div class="place-body"><span class="region-tag">Miền Trung</span><h3><a href="chi-tiet.html?place=ba-na">Bà Nà Hills</a></h3><p>Khu du lịch trên núi với khí hậu mát, cảnh quan và kiến trúc châu Âu độc đáo.</p><span class="place-meta">Đà Nẵng</span></div>
+          </article>
+          <article class="place-card" data-region="central">
+            <a href="chi-tiet.html?place=da-nang" aria-label="Xem chi tiết Đà Nẵng"><img src="https://tse1.mm.bing.net/th/id/OIP.EqzAKyuNxTZ_XeqDXnPGhwHaFj?r=0&pid=Api&h=220&P=0" alt="Thành phố Đà Nẵng"></a>
+            <div class="place-body"><span class="region-tag">Miền Trung</span><h3><a href="chi-tiet.html?place=da-nang">Đà Nẵng</a></h3><p>Thành phố biển trẻ trung nổi bật với cầu, bãi biển và nền ẩm thực phong phú.</p><span class="place-meta">Đà Nẵng</span></div>
+          </article>
+          <article class="place-card" data-region="south">
+            <a href="chi-tiet.html?place=con-dao" aria-label="Xem chi tiết Côn Đảo"><img src="https://tse4.mm.bing.net/th/id/OIP.LPkXwdIyBg1Djw4xWlnlXwHaE8?r=0&pid=Api&h=220&P=0" alt="Biển Côn Đảo"></a>
+            <div class="place-body"><span class="region-tag">Miền Nam</span><h3><a href="chi-tiet.html?place=con-dao">Côn Đảo</a></h3><p>Quần đảo hoang sơ với biển xanh, rừng dừa và những di tích lịch sử đầy ý nghĩa.</p><span class="place-meta">Bà Rịa - Vũng Tàu</span></div>
+          </article>
+          <article class="place-card" data-region="central">
+            <a href="chi-tiet.html?place=mui-ne" aria-label="Xem chi tiết Mũi Né"><img src="https://tse1.mm.bing.net/th/id/OIP.GjmBvE7vHzPvqsk3gVnY6gHaEk?r=0&pid=Api&h=220&P=0" alt="Đồi cát Mũi Né"></a>
+            <div class="place-body"><span class="region-tag">Miền Trung</span><h3><a href="chi-tiet.html?place=mui-ne">Mũi Né</a></h3><p>Bãi biển nắng gió nổi tiếng với đồi cát đỏ, đồi cát vàng và làng chài yên bình.</p><span class="place-meta">Bình Thuận</span></div>
+          </article>
+          <article class="place-card" data-region="south">
+            <a href="chi-tiet.html?place=ben-tre" aria-label="Xem chi tiết Bến Tre"><img src="https://tse1.mm.bing.net/th/id/OIP.8JbAK6mF8wgQnK2YeK_dhAHaE8?r=0&pid=Api&h=220&P=0" alt="Miệt vườn Bến Tre"></a>
+            <div class="place-body"><span class="region-tag">Miền Nam</span><h3><a href="chi-tiet.html?place=ben-tre">Bến Tre</a></h3><p>Xứ dừa xanh mát với miệt vườn, kênh rạch và trải nghiệm đời sống miền Tây.</p><span class="place-meta">Bến Tre</span></div>
+          </article>
+          <article class="place-card" data-region="central">
+            <a href="chi-tiet.html?place=my-son" aria-label="Xem chi tiết Thánh địa Mỹ Sơn"><img src="https://tse3.mm.bing.net/th/id/OIP.Eqj92-rsl0VhFFxAjJKX2gHaE8?r=0&pid=Api&h=220&P=0" alt="Thánh địa Mỹ Sơn"></a>
+            <div class="place-body"><span class="region-tag">Miền Trung</span><h3><a href="chi-tiet.html?place=my-son">Thánh địa Mỹ Sơn</a></h3><p>Quần thể tháp Chăm cổ tọa lạc trong thung lũng xanh và rừng núi Quảng Nam.</p><span class="place-meta">Quảng Nam</span></div>
+          </article>
+          <article class="place-card" data-region="north">
+            <a href="chi-tiet.html?place=cat-ba" aria-label="Xem chi tiết Cát Bà"><img src="https://tse4.mm.bing.net/th/id/OIP.SG1vY9dTXXh3OrDYTRsDaAHaEj?r=0&pid=Api&h=220&P=0" alt="Đảo Cát Bà"></a>
+            <div class="place-body"><span class="region-tag">Miền Bắc</span><h3><a href="chi-tiet.html?place=cat-ba">Cát Bà</a></h3><p>Hòn đảo thiên nhiên với rừng, hang động, bãi biển và làng chài ven núi.</p><span class="place-meta">Hải Phòng</span></div>
+          </article>
+          <article class="place-card" data-region="north">
+            <a href="chi-tiet.html?place=ba-be" aria-label="Xem chi tiết Hồ Ba Bể"><img src="https://tse3.mm.bing.net/th/id/OIP.Ic2RzyhN1ntn-0h9MtmY0QHaFe?r=0&pid=Api&h=220&P=0" alt="Hồ Ba Bể"></a>
+            <div class="place-body"><span class="region-tag">Miền Bắc</span><h3><a href="chi-tiet.html?place=ba-be">Hồ Ba Bể</a></h3><p>Hồ nước ngọt lớn, núi rừng nguyên sinh và bản làng tạo nên không gian yên bình.</p><span class="place-meta">Bắc Kạn</span></div>
+          </article>
+          <article class="place-card" data-region="north">
+            <a href="chi-tiet.html?place=cuc-phuong" aria-label="Xem chi tiết Vườn quốc gia Cúc Phương"><img src="https://tse1.mm.bing.net/th/id/OIP.BDNfIs3fWaE574jPos9otgHaE7?r=0&pid=Api&h=220&P=0" alt="Vườn quốc gia Cúc Phương"></a>
+            <div class="place-body"><span class="region-tag">Miền Bắc</span><h3><a href="chi-tiet.html?place=cuc-phuong">Cúc Phương</a></h3><p>Vườn quốc gia cổ kính với rừng nguyên sinh, động vật quý hiếm và hang động tiền sử.</p><span class="place-meta">Ninh Bình</span></div>
+          </article>
+          <article class="place-card" data-region="central">
+            <a href="chi-tiet.html?place=ly-son" aria-label="Xem chi tiết Lý Sơn"><img src="https://tse2.mm.bing.net/th/id/OIP.4a9cv_ohAbzBdY5e4ABXRQHaE8?r=0&pid=Api&h=220&P=0" alt="Đảo Lý Sơn"></a>
+            <div class="place-body"><span class="region-tag">Miền Trung</span><h3><a href="chi-tiet.html?place=ly-son">Lý Sơn</a></h3><p>Đảo núi lửa giữa biển xanh với hang đá, cánh đồng tỏi và cảnh hoàng hôn đẹp.</p><span class="place-meta">Quảng Ngãi</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Du Lịch Việt Nam, Copyright © 2026</p>
+    <a href="mailto:khoidangkho1i@gmail.com">khoidangkho1i@gmail.com</a>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuButton.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.querySelectorAll('.filter-button').forEach((button) => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.filter-button').forEach((item) => item.classList.remove('active'));
+        button.classList.add('active');
+
+        const region = button.dataset.region;
+        document.querySelectorAll('.place-card').forEach((card) => {
+          card.hidden = region !== 'all' && card.dataset.region !== region;
+        });
+      });
+    });
+
+    document.querySelectorAll('.place-card').forEach((card) => {
+      card.querySelectorAll('a[href*="chi-tiet.html"]').forEach((detailLink) => {
+        const image = card.querySelector('img');
+        const name = card.querySelector('h3')?.textContent.trim();
+        const region = card.querySelector('.region-tag')?.textContent.trim();
+        const location = card.querySelector('.place-meta')?.textContent.trim();
+        const detailUrl = new URL(detailLink.href);
+
+        detailUrl.searchParams.set('name', name || '');
+        detailUrl.searchParams.set('region', region || '');
+        detailUrl.searchParams.set('location', location || '');
+        detailUrl.searchParams.set('image', image ? image.src : '');
+        detailLink.href = detailUrl.href;
+
+        detailLink.addEventListener('click', () => {
+        const placeKey = new URL(detailLink.href).searchParams.get('place');
+
+        sessionStorage.setItem('selectedPlace', JSON.stringify({
+          key: placeKey,
+          name,
+          region,
+          location,
+          image: image ? image.src : ''
+        }));
+      });
+      });
+    });
+  </script>
+</body>
+</html>

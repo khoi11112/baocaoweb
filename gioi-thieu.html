@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giới Thiệu | Du Lịch Việt Nam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+  <header class="hero page-header" id="trang-chu">
+    <nav class="navbar container" aria-label="Điều hướng chính">
+      <a class="brand" href="index.html">Du Lịch Việt Nam</a>
+      <button class="menu-toggle" type="button" aria-label="Mở menu" aria-expanded="false">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Trang chủ</a>
+        <a class="active" href="gioi-thieu.html">Giới thiệu</a>
+        <a href="dia-diem.html">Địa điểm</a>
+        <a href="lien-he.html">Liên hệ</a>
+        <a href="chi-tiet.html">Chi tiết</a>
+      </div>
+    </nav>
+    <div class="hero-content container">
+      <h1>Giới Thiệu</h1>
+      <p>Hành trình khám phá vẻ đẹp và văn hóa Việt Nam</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-page" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <p class="eyebrow">Về chúng tôi</p>
+          <h2 id="about-title">Đưa bạn đến gần hơn với Việt Nam</h2>
+          <p>Du Lịch Việt Nam được xây dựng với mong muốn trở thành điểm khởi đầu tin cậy cho mọi hành trình khám phá đất nước. Chúng tôi giới thiệu những miền đất, con người, di sản, văn hóa và ẩm thực đặc sắc, từ cao nguyên xanh, đồng bằng trù phú đến những vùng biển nhiệt đới đầy nắng gió.</p>
+          <p>Mỗi địa điểm trong hệ thống đều được chọn lựa để người đọc có thể hình dung rõ nét về cảnh quan, nét văn hóa và những trải nghiệm đáng nhớ. Bạn có thể tìm thấy gợi ý nghỉ dưỡng ven biển, leo núi, tham quan di tích, tìm hiểu làng nghề hoặc thưởng thức ẩm thực địa phương.</p>
+          <p>Chúng tôi tin rằng du lịch còn là cơ hội lắng nghe câu chuyện địa phương, tiếp xúc với con người và bảo tồn những giá trị văn hóa độc đáo. Vì vậy, Du Lịch Việt Nam khuyến khích khám phá đất nước một cách chủ động, thân thiện và có trách nhiệm.</p>
+          <div class="stats" aria-label="Thông tin nổi bật">
+            <div class="stat"><strong>63</strong><span>Tỉnh thành</span></div>
+            <div class="stat"><strong>100+</strong><span>Điểm đến</span></div>
+            <div class="stat"><strong>54</strong><span>Dân tộc</span></div>
+          </div>
+          <a class="back-home" href="index.html">Về trang chủ</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Du Lịch Việt Nam, Copyright © 2026</p>
+    <a href="mailto:khoidangkho1i@gmail.com">khoidangkho1i@gmail.com</a>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuButton.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+    });
+  </script>
+</body>
+</html>

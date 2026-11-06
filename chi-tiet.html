@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi Tiết Địa Điểm | Du Lịch Việt Nam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=17">
+</head>
+<body>
+  <header class="hero page-header detail-header" id="trang-chu">
+    <nav class="navbar container" aria-label="Điều hướng chính">
+      <a class="brand" href="index.html">Du Lịch Việt Nam</a>
+      <button class="menu-toggle" type="button" aria-label="Mở menu" aria-expanded="false">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Trang chủ</a>
+        <a href="gioi-thieu.html">Giới thiệu</a>
+        <a href="dia-diem.html">Địa điểm</a>
+        <a href="lien-he.html">Liên hệ</a>
+        <a class="active" href="chi-tiet.html">Chi tiết</a>
+      </div>
+    </nav>
+    <div class="hero-content container">
+      <p class="detail-region" id="detail-region">Miền Bắc</p>
+      <h1 id="detail-title">Vịnh Hạ Long</h1>
+    </div>
+  </header>
+
+  <div class="detail-breadcrumb">
+    <div class="container">
+      <a href="index.html">Trang chủ</a>
+      <span>/</span>
+      <a href="dia-diem.html">Địa điểm</a>
+      <span>/</span>
+      <strong id="breadcrumb-title">Vịnh Hạ Long</strong>
+    </div>
+  </div>
+
+  <main class="detail-page">
+    <div class="container detail-grid">
+      <article class="detail-main">
+        <div class="detail-feature">
+          <img class="detail-cover" id="detail-image" src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=90" alt="Vịnh Hạ Long">
+          <div class="detail-feature-copy">
+            <p class="detail-lead" id="detail-lead"></p>
+            <div class="detail-tags" aria-label="Điểm nổi bật">
+              <span>Khám phá</span>
+              <span>Chụp ảnh</span>
+              <span>Trải nghiệm</span>
+            </div>
+          </div>
+        </div>
+        <p id="detail-description"></p>
+        <p>Du khách có thể kết hợp tham quan hang động, chèo kayak, nghỉ đêm trên tàu hoặc ngắm hoàng hôn trên biển. Đây là nơi lý tưởng để vừa thư giãn vừa khám phá cảnh quan thiên nhiên độc đáo của Việt Nam.</p>
+      </article>
+
+      <aside class="detail-sidebar">
+        <div class="detail-info">
+          <h2>Thông tin địa điểm</h2>
+          <dl>
+            <div><dt>Địa phương</dt><dd id="detail-location">Quảng Ninh</dd></div>
+            <div><dt>Khu vực</dt><dd id="detail-area">Miền Bắc</dd></div>
+            <div><dt>Thời điểm đẹp nhất</dt><dd id="detail-season">Tháng 3 - tháng 5</dd></div>
+            <div><dt>Gợi ý thời gian</dt><dd id="detail-duration">2 - 3 ngày</dd></div>
+          </dl>
+          <a class="detail-button" href="dia-diem.html">Xem các địa điểm khác</a>
+        </div>
+      </aside>
+    </div>
+
+    <section class="container related-section" aria-labelledby="related-title">
+      <p class="eyebrow">Gợi ý khám phá</p>
+      <h2 id="related-title">Địa điểm liên quan</h2>
+      <div class="related-grid" id="related-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Du Lịch Việt Nam, Copyright © 2026</p>
+    <a href="mailto:khoidangkho1i@gmail.com">khoidangkho1i@gmail.com</a>
+  </footer>
+
+  <script>
+    const places = {
+      "ha-long": {
+        name: "Vịnh Hạ Long", region: "Miền Bắc", location: "Quảng Ninh",
+        image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=90",
+        season: "Tháng 3 - tháng 5", duration: "2 - 3 ngày",
+        lead: "Vịnh Hạ Long nổi tiếng với hàng nghìn đảo đá vôi nhô lên khỏi làn nước xanh ngọc, tạo nên một trong những cảnh quan biển đẹp và huyền bí nhất Việt Nam.",
+        description: "Du khách có thể tham quan hang Sửng Sốt, đảo Titop, làng chài Cửa Vạn và nhiều hang động tự nhiên. Mỗi góc nhìn trên vịnh đều mang vẻ đẹp riêng, nhất là vào khoảnh khắc bình minh và hoàng hôn."
+      },
+      "hoi-an": {
+        name: "Phố cổ Hội An", region: "Miền Trung", location: "Quảng Nam",
+        image: "https://tse4.mm.bing.net/th/id/OIP.1zq4a7G007iHUBybiLxrTwHaEn?r=0&pid=Api&h=220&P=0",
+        season: "Tháng 2 - tháng 8", duration: "1 - 2 ngày",
+        lead: "Phố cổ Hội An là không gian kiến trúc trầm mặc, nơi mái ngói vàng, đèn lồng rực rỡ và dòng sông Hoài tạo nên nét quyến rũ đặc trưng.",
+        description: "Hành trình khám phá phố cổ có thể bắt đầu từ Chùa Cầu, phố hội, những mái hiên cổ và các làng nghề xung quanh. Khi màn đêm buông xuống, cả phố khoác lên mình sắc màu lung linh."
+      },
+      "hue": {
+        name: "Cố đô Huế", region: "Miền Trung", location: "Thừa Thiên Huế",
+        image: "https://tse4.mm.bing.net/th/id/OIP.lRsNO_ufUMl9E0PqrZhfAgHaE8?r=0&pid=Api&h=220&P=0",
+        season: "Tháng 1 - tháng 4", duration: "2 - 3 ngày",
+        lead: "Huế là cố đô mang đậm dấu ấn triều Nguyễn, lưu giữ Đại Nội, lăng tẩm, chùa chiền và những di sản văn hóa sống động.",
+        description: "Du khách có thể thả mình trên dòng sông Hương, khám phá quần thể di tích trong thành phố, thưởng thức ẩm thực cung đình và nghe ca Huế trên sông."
+      },
+      "phu-quoc": {
+        name: "Đảo Phú Quốc", region: "Miền Nam", location: "An Giang",
+        image: "https://tse3.mm.bing.net/th/id/OIP.L1Z_RnujZqeatQJcnGEpbgHaEK?r=0&pid=Api&h=220&P=0",
+        season: "Tháng 11 - tháng 4", duration: "3 - 4 ngày",
+        lead: "Phú Quốc hấp dẫn du khách bằng bãi cát trắng, làn nước trong xanh, rừng nguyên sinh và những buổi hoàng hôn rực rỡ.",
+        description: "Du lịch Phú Quốc có thể kết hợp tắm biển, khám phá đảo, tham quan làng nghề, thưởng thức hải sản và trải nghiệm cáp treo vượt biển."
+      },
+      "sapa": {
+        name: "Sa Pa", region: "Miền Bắc", location: "Lào Cai",
+        image: "https://tse4.mm.bing.net/th/id/OIP.l53f-tvYGfuY45Ti82FTagHaFi?r=0&pid=Api&h=220&P=0",
+        season: "Tháng 9 - tháng 11", duration: "2 - 3 ngày",
+        lead: "Sa Pa là điểm đến nổi tiếng với ruộng bậc thang, bản làng vùng cao, khí hậu se lạnh và khung cảnh núi rừng hùng vĩ.",
+        description: "Hành trình khám phá Sa Pa có thể bao gồm Fansipan, bản Cát Cát, thung lũng Mường Hoa và các bản làng của cộng đồng dân tộc địa phương."
+      },
+      "da-lat": {
+        name: "Thành phố Đà Lạt", region: "Tây Nguyên", location: "Lâm Đồng",
+        image: "https://tse3.mm.bing.net/th/id/OIP.eRJmvxd-FwDauGOWwo24GAHaEw?r=0&pid=Api&h=220&P=0",
+        season: "Quanh năm", duration: "2 - 3 ngày",
+        lead: "Đà Lạt quyến rũ du khách bằng không khí se lạnh, rừng thông xanh, hoa nở quanh năm và kiến trúc cổ độc đáo.",
+        description: "Du khách có thể dạo quanh hồ Xuân Hương, thăm các vườn hoa, nhà thờ cổ và khuôn viên đồi núi xung quanh thành phố."
+      },
+      "trang-an": {
+        name: "Tràng An", region: "Miền Bắc", location: "Ninh Bình",
+        image: "https://tse2.mm.bing.net/th/id/OIP.lYr7CCzDCUcrYIu1BH1HBwHaFC?r=0&pid=Api&h=220&P=0",
+        season: "Tháng 11 - tháng 3", duration: "1 - 2 ngày",
+        lead: "Tràng An là quần thể danh thắng nổi tiếng với núi đá vôi, hang động, dòng sông và di tích lịch sử tạo nên một cảnh quan vừa hùng vĩ vừa thanh bình.",
+        description: "Du khách có thể thưởng ngoạn bằng thuyền qua các hang động và sông nước, kết hợp tham quan chùa chiền, di tích và không gian thiên nhiên tại Ninh Bình."
+      }
+    };
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const key = urlParams.get("place");
+    let selectedPlace = null;
+    try {
+      selectedPlace = JSON.parse(sessionStorage.getItem("selectedPlace") || "null");
+    } catch (error) {
+      selectedPlace = null;
+    }
+
+    const knownPlace = places[key];
+    const urlPlace = urlParams.has("name") && urlParams.get("name") ? {
+      name: urlParams.get("name"),
+      region: urlParams.get("region") || knownPlace?.region || "Miền Việt Nam",
+      location: urlParams.get("location") || knownPlace?.location || urlParams.get("region") || "Việt Nam",
+      image: urlParams.get("image"),
+      season: knownPlace?.season || "Quanh năm",
+      duration: knownPlace?.duration || "1 - 2 ngày",
+      lead: knownPlace?.lead || `${urlParams.get("name")} là một điểm đến hấp dẫn, mang đến nhiều trải nghiệm văn hóa, ẩm thực và cảnh quan đặc sắc.`,
+      description: knownPlace?.description || `Khám phá ${urlParams.get("name")} để tận hưởng không khí địa phương, tham quan các danh lam thắng cảnh và trải nghiệm nét đẹp riêng của vùng đất này.`
+    } : null;
+    const placeFromList = selectedPlace && selectedPlace.key === key ? {
+      name: selectedPlace.name,
+      region: selectedPlace.region || "Miền Việt Nam",
+      location: selectedPlace.location || selectedPlace.region || "Việt Nam",
+      image: selectedPlace.image,
+      season: knownPlace?.season || "Quanh năm",
+      duration: knownPlace?.duration || "1 - 2 ngày",
+      lead: knownPlace?.lead || `${selectedPlace.name} là một điểm đến hấp dẫn, mang đến nhiều trải nghiệm văn hóa, ẩm thực và cảnh quan đặc sắc.`,
+      description: knownPlace?.description || `Khám phá ${selectedPlace.name} để tận hưởng không khí địa phương, tham quan các danh lam thắng cảnh và trải nghiệm nét đẹp riêng của vùng đất này.`
+    } : null;
+    const place = urlPlace || placeFromList || knownPlace || places["ha-long"];
+
+    document.title = `${place.name} | Du Lịch Việt Nam`;
+    document.getElementById("detail-region").textContent = place.region;
+    document.getElementById("detail-title").textContent = place.name;
+    document.getElementById("breadcrumb-title").textContent = place.name;
+    document.getElementById("detail-image").src = place.image;
+    document.getElementById("detail-image").alt = place.name;
+    document.getElementById("detail-image").addEventListener("error", () => {
+      if (!document.getElementById("detail-image").src.includes("images.unsplash.com/photo-1528127269322")) {
+        document.getElementById("detail-image").src = "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=90";
+      }
+    }, { once: true });
+    document.getElementById("detail-lead").textContent = place.lead;
+    document.getElementById("detail-description").textContent = place.description;
+    document.getElementById("detail-location").textContent = place.location;
+    document.getElementById("detail-area").textContent = place.region;
+    document.getElementById("detail-season").textContent = place.season;
+    document.getElementById("detail-duration").textContent = place.duration;
+
+    const fallbackRelated = Object.entries(places).map(([placeKey, item]) => ({
+      key: placeKey,
+      name: item.name,
+      region: item.region,
+      location: item.location,
+      image: item.image
+    })).filter((item) => item.name !== place.name);
+
+    const shuffle = (items) => {
+      const result = [...items];
+      for (let index = result.length - 1; index > 0; index -= 1) {
+        const randomIndex = Math.floor(Math.random() * (index + 1));
+        [result[index], result[randomIndex]] = [result[randomIndex], result[index]];
+      }
+      return result;
+    };
+
+    const renderRelated = (items) => {
+      const uniqueItems = items.filter((item, index, list) =>
+        item.name !== place.name &&
+        list.findIndex((candidate) => candidate.key === item.key || candidate.name === item.name) === index
+      );
+
+      const sameRegion = shuffle(uniqueItems.filter((item) => item.region === place.region));
+      const otherRegion = shuffle(uniqueItems.filter((item) => item.region !== place.region));
+      const selected = [...sameRegion, ...otherRegion].slice(0, 3);
+
+      document.getElementById("related-grid").innerHTML = selected.map((item) => {
+        const params = new URLSearchParams({
+          place: item.key,
+          name: item.name,
+          region: item.region,
+          location: item.location || item.region,
+          image: item.image
+        });
+        return `
+          <a class="related-card" href="chi-tiet.html?${params.toString()}">
+            <img src="${item.image}" alt="${item.name}">
+            <span><small>${item.region}</small><strong>${item.name}</strong></span>
+          </a>
+        `;
+      }).join("");
+    };
+
+    renderRelated(fallbackRelated);
+
+    fetch("dia-diem.html")
+      .then((response) => response.ok ? response.text() : "")
+      .then((html) => {
+        if (!html) return;
+        const parsed = new DOMParser().parseFromString(html, "text/html");
+        const cards = [...parsed.querySelectorAll(".place-card")];
+        if (!cards.length) return;
+
+        const destinationPool = cards.map((card) => {
+          const link = card.querySelector('a[href*="chi-tiet.html"]');
+          const image = card.querySelector("img");
+          const hrefParams = link ? new URL(link.getAttribute("href"), window.location.href).searchParams : null;
+          const rawImage = image?.getAttribute("src") || "";
+          return {
+            key: hrefParams?.get("place") || "",
+            name: card.querySelector("h3")?.textContent.trim() || "",
+            region: card.querySelector(".region-tag")?.textContent.trim() || "Miền Việt Nam",
+            location: card.querySelector(".place-meta")?.textContent.trim() || "",
+            image: rawImage ? new URL(rawImage, window.location.href).href : ""
+          };
+        }).filter((item) => item.name && item.key);
+
+        renderRelated(destinationPool);
+      })
+      .catch(() => renderRelated(fallbackRelated));
+
+    const menuButton = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    menuButton.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+    });
+  </script>
+</body>
+</html>

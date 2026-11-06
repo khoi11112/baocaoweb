@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên Hệ | Du Lịch Việt Nam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+  <header class="hero page-header contact-header" id="trang-chu">
+    <nav class="navbar container" aria-label="Điều hướng chính">
+      <a class="brand" href="index.html">Du Lịch Việt Nam</a>
+      <button class="menu-toggle" type="button" aria-label="Mở menu" aria-expanded="false">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Trang chủ</a>
+        <a href="gioi-thieu.html">Giới thiệu</a>
+        <a href="dia-diem.html">Địa điểm</a>
+        <a class="active" href="lien-he.html">Liên hệ</a>
+        <a href="chi-tiet.html">Chi tiết</a>
+      </div>
+    </nav>
+    <div class="hero-content container">
+      <h1>Liên Hệ</h1>
+      <p>Hãy cho chúng tôi biết kế hoạch du lịch của bạn</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <p class="eyebrow">Thông tin liên hệ</p>
+          <h2>Kết Nối Với Chúng Tôi</h2>
+          <p>Đội ngũ Du Lịch Việt Nam luôn sẵn sàng hỗ trợ bạn tìm hiểu địa điểm, lịch trình và trải nghiệm phù hợp.</p>
+          <address class="contact-list">
+            <a class="contact-item" href="https://maps.google.com/?q=TP.+Vinh+Long,+Vietnam" target="_blank" rel="noopener"><span class="contact-icon">⌖</span><span><strong>Địa chỉ</strong> TP. Vĩnh Long</span></a>
+            <a class="contact-item" href="tel:+84343139557"><span class="contact-icon">☎</span><span><strong>Điện thoại</strong>(+84) 343 139 557</span></a>
+            <a class="contact-item" href="mailto:khoidangkho1i@gmail.com"><span class="contact-icon">✉</span><span><strong>Email</strong>khoidangkho1i@gmail.com</span></a>
+          </address>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <p class="eyebrow">Gửi yêu cầu</p>
+          <h2>Gửi Tin Nhắn</h2>
+          <div class="form-columns">
+            <div class="form-row"><label for="name">Họ và tên</label><input id="name" name="name" type="text" placeholder="Nhập họ và tên" required></div>
+            <div class="form-row"><label for="contact-email">Email</label><input id="contact-email" name="email" type="email" placeholder="Nhập địa chỉ email" required></div>
+          </div>
+          <div class="form-row"><label for="subject">Chủ đề</label><input id="subject" name="subject" type="text" placeholder="Bạn cần hỗ trợ về?"></div>
+          <div class="form-row"><label for="message">Nội dung</label><textarea id="message" name="message" rows="5" placeholder="Nhập nội dung tin nhắn" required></textarea></div>
+          <button class="contact-submit" type="submit">Gửi liên hệ</button>
+          <p class="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Du Lịch Việt Nam, Copyright © 2026</p>
+    <a href="mailto:khoidangkho1i@gmail.com">khoidangkho1i@gmail.com</a>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuButton.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.querySelector('.contact-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const status = event.currentTarget.querySelector('.form-status');
+      status.textContent = 'Cảm ơn bạn! Tin nhắn đã được gửi thành công.';
+      event.currentTarget.reset();
+    });
+  </script>
+</body>
+</html>
